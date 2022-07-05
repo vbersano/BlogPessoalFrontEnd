@@ -9,6 +9,10 @@ ul.social-network li {
     padding: 5px;
 }
 
+span{
+    font-weight: 600;
+}
+
 .fa {
     font-size: 35pt;
     color: white;
@@ -16,5 +20,9 @@ ul.social-network li {
 }
 
 .fa:hover {
-    color: indigo;
+    color: #9ed939;
+}
+
+.bg-gr{
+    background-color: #9ed939;
 }
