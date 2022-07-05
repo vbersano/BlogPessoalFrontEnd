@@ -1,0 +1,18 @@
+#img-bg {
+    background-image: url('https://i.imgur.com/3py44Nc.png');
+
+    min-height: 650px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+hr{
+    border: 1px solid whitesmoke;
+}
+
+div.form-group{
+    margin-top: 12px;
+    font-weight: 600;
+}
