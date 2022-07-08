@@ -18,14 +18,18 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) { }
 
+  ngOnInit() {
+    window.scroll(0, 0)
+  }
+
   entrar() {
     this.auth.login(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp
 
-      environment.token = this.userLogin.token
-      environment.nome = this.userLogin.nome
-      environment.foto = this.userLogin.foto
-      environment.id = this.userLogin.id
+      environment.token = this.userLogin.token;
+      environment.nome = this.userLogin.nome;
+      environment.foto = this.userLogin.foto;
+      environment.id = this.userLogin.id;
 
       console.log(environment.token)
       console.log(environment.nome)
@@ -34,14 +38,10 @@ export class LoginComponent implements OnInit {
 
       this.router.navigate(['/mainpage'])
     }, erro => {
-      if (erro.status == 500) {
+      if (erro.status == 401) {
         alert('Your Username or password are incorrect')
       }
-    })
-  }
-
-  ngOnInit(): void {
-    window.scroll(0, 0)
+    });
   }
 
 }

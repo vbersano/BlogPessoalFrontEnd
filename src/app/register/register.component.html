@@ -1,67 +1,82 @@
-<div class="container-fluid bg-dark text-light">
+<div class="container-fluid p-5 bg-gr">
 
-    <div class="row">
+    <div class="container-fluid bg-dark text-light" style="border-radius: 20px">
 
-        <div class="col-md-8" id='img-bg'></div>
+        <div class="row">
+    
+            <div class="col-md-7 d-flex justify-content-center align-items-center" id="img-bg"
+                style="border-end-start-radius: 20px; border-start-start-radius: 20px">
 
-        <div class="col-md-4 mt-5 mb-5">
-
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-10">
-
-                    <h1 class="text-center">Registration</h1>
-
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="username" id="username" placeholder="Username">
+                <div class="card p-3" style="width: 15rem; height: max-content; border-radius: 10px;">
+                    <div class="card-body p-0 d-flex justify-content-center">
+                        <img style="height: 200px;" src="https://i.imgur.com/KqBPm1s.png" alt="">
                     </div>
-
-                    <div class="form-group">
-                        <label for="user">E-mail</label>
-                        <input [(ngModel)]='user.usuario' class="form-control" type="text" name="user" id="user" placeholder="E-mail adress">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="photo">Profile Picture</label>
-                        <input [(ngModel)]='user.foto' class="form-control" type="text" name="photo" id="photo"
-                            placeholder="Profile picture URL link">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input (input)='confirmSenha($event)' class="form-control" type="password" name="password" id="password"
-                            placeholder="Password">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmPassword" id="confirmPassword"
-                            placeholder="Confirm your Password">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <select class="form-control" name="type" id="type" (change)='tipoUser($event)'>
-                            <option>Select a User Type</option>
-                            <option value="Normal">Normal</option>
-                            <option value="Admin">Admin</option>
-                        </select>
-                    </div>
-
-                    <div class="d-flex justify-content-center pt-4">
-                        <button type="submit" class="btn btn-outline-success" (click)='cadastrar()'>Register</button>
-                    </div>
-
-                    <hr class="mt-5 mb-5">
-
-                    <p class="text-center text-light text-md">Alredy have an account? <a routerLink="/login">Sign-In</a>
-                    </p>
-
+                    <h3 class="text-center text-light">blog pessoal.</h3>
+                    <h6 class="text-center text-light">made by: vbersano!</h6>
                 </div>
 
             </div>
+    
+            <div class="col-md-5 mt-5 mb-5">
+    
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10">
+    
+                        <h1 class="text-center">Registration</h1>
+    
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input [(ngModel)]='user.nome' class="form-control" type="text" name="username" id="username" placeholder="Username">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="user">E-mail</label>
+                            <input [(ngModel)]='user.usuario' class="form-control" type="text" name="user" id="user" placeholder="E-mail adress">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="photo">Profile Picture</label>
+                            <input [(ngModel)]='user.foto' class="form-control" type="text" name="photo" id="photo"
+                                placeholder="Profile picture URL link">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input (input)='confirmSenha($event)' class="form-control" type="password" name="password" id="password"
+                                placeholder="Password">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmPassword" id="confirmPassword"
+                                placeholder="Confirm your Password">
+                        </div>
+    
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <select class="form-control" name="type" id="type" (change)='tipoUser($event)'>
+                                <option>Select a User Type</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Admin">Admin</option>
+                            </select>
+                        </div>
+    
+                        <div class="d-flex justify-content-center pt-4">
+                            <button type="submit" class="btn btn-outline-success" (click)='cadastrar()'>Register</button>
+                        </div>
+    
+                        <hr class="mt-5 mb-5">
+    
+                        <p class="text-center text-light text-md">Alredy have an account? <a routerLink="/login">Sign-In</a>
+                        </p>
+    
+                    </div>
+    
+                </div>
+            </div>
+    
         </div>
-
+    
     </div>
 
 </div>

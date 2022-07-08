@@ -1,13 +1,26 @@
 #img-bg {
-    background-image: url('https://i.imgur.com/Z1so6m0.jpg');
+    background-image: url('https://i.imgur.com/nAVIyHu.jpg');
 
-    min-height: 700px;
+    min-height: 529px;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-hr{
+hr {
     border: 1px solid whitesmoke;
+}
+
+.bg-gr {
+    background-image: linear-gradient(180deg, #e6ff99 0, #ceff9b 16.67%, #b5ff9d 33.33%, #9df29d 50%, #86e49d 66.67%, #72d89d 83.33%, #60ce9e 100%);
+
+}
+
+.card {
+    backdrop-filter: blur(4px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
