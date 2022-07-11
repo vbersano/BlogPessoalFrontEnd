@@ -1,0 +1,62 @@
+
+#img-bg {
+    background-image: url('https://i.imgur.com/VDPmGS3.jpg');
+
+    min-height: 500px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+hr {
+    border: 1px solid whitesmoke;
+}
+
+.nav{
+    background-color: dark;
+    font-weight: 500;
+}
+
+.bg-gr {
+    background-image: linear-gradient(180deg, #e6ff99 0, #ceff9b 16.67%, #b5ff9d 33.33%, #9df29d 50%, #86e49d 66.67%, #72d89d 83.33%, #60ce9e 100%);
+
+}
+
+.card {
+    backdrop-filter: blur(4px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.fs-52 {
+    font-size: 52pt;
+}
+
+.fs-18 {
+    font-size: 18pt;
+}
+
+.gr-txt {
+    text-align: center;
+    font-weight: 800 ;
+    
+    background: linear-gradient(to right,#b935d2 20%, #9f3bdb 40%, #7e42e5 60%, #514aed 80%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    text-decoration-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 4s linear infinite;
+  }
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }

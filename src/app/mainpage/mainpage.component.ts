@@ -9,12 +9,13 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class MainpageComponent implements OnInit {
 
+  nome = environment.nome
+
   constructor(private router: Router) { }
 
   ngOnInit() {
 
     if(environment.token == ''){
-     // alert ('Sua sessão expirou. Faça o login novamente!')
       this.router.navigate(['/login'])
     }
   } 
