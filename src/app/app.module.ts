@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { TemaComponent } from './tema/tema.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    MainpageComponent
+    MainpageComponent,
+    TemaComponent
   ],
   imports: [
     BrowserModule,
