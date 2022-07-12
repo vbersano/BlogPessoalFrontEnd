@@ -12,11 +12,6 @@ hr {
     border: 1px solid whitesmoke;
 }
 
-.bg-gr {
-    background-image: linear-gradient(180deg, #e6ff99 0, #ceff9b 16.67%, #b5ff9d 33.33%, #9df29d 50%, #86e49d 66.67%, #72d89d 83.33%, #60ce9e 100%);
-
-}
-
 .card {
     backdrop-filter: blur(4px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);

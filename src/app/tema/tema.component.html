@@ -1,76 +1,69 @@
-<div class="container-fluid">
+<div class="bg-darker p-0">
+    <a routerLink='/mainpage' class="text-light ps-3">
+        <i class="fa fa-angle-double-left" aria-hidden="true"> HOME</i>
+    </a>
+</div>
 
-    <div class="row" id="img-bg">
-        <div class="col-md-12 text-light">
-            
+<div class="container-fluid p-5 d-flex text-light bg-gr justify-content-center">
 
-            <a routerLink='/mainpage' class="text-light">
-                <i class="fa fa-angle-double-left" aria-hidden="true">Home</i>
-            </a>
+    <div class="card p-3" style="border-radius: 20px; width: 120vh;">
+        <h1 class="fs-54 text-center">Tags</h1>
+        <h5 class="fs-18 text-center pt-3">Check all the avaliable Tags, or register a new one</h5>
 
-            <h1 class="fs-54 text-center">Tags</h1>
-            <h5 class="fs-18 text-center pt-3">Check all the avaliable Tags, or register a new one</h5>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-5">
+                <div class="form-group pt-1">
+                    <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao"
+                        placeholder="Tag Description">
+                </div>
 
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-3">
-                    <div class="form-group pt-1">
-                        <input type="text" class="form-control" id="descricao" placeholder="Tag Description">
-                    </div>
-
-                    <div class="d-flex justify-content-center pt-3">
-                        <button class="btn btn-light">Register</button>
-                    </div>
+                <div class="d-flex justify-content-center pt-3 pb-3">
+                    <button class="btn btn-light" (click)="cadastrar()">Register</button>
                 </div>
             </div>
-
         </div>
     </div>
 
 </div>
 
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <h2 class="text-center">
-                Registered Tags
-            </h2>
-        </div>
-    </div>
+<div class="bg-dark">
+    <div class="container bg-dark pt-1">
+        <div class="container bg-dark text-light p-0">
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <h2 class="text-center">
+                        Registered Tags
+                    </h2>
+                </div>
+            </div>
 
-    <div class="row mt-3 mb-5 d-flex justify-content-center">
-        <div class="col-md-6">
+            <div class="row mt-3 pb-5 d-flex justify-content-center bg-dark">
+                <div class="col-md-6">
 
-            <table class="table table-hover table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
+                    <table class="table table-hover table-dark p-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Tag Description</th>
+                                <th scope="col" class="text-end">Tag Modifiers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor='let tema of listaTemas'>
+                                <th>{{tema.id}}</th>
+                                <td>{{tema.descricao}}</td>
+                                <td class="d-flex justify-content-end">
+                                    <button class="btn btn-light me-3">Edit</button>
+                                    <button class="btn btn-outline-danger">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
 
         </div>
-    </div>
 
+    </div>
 </div>

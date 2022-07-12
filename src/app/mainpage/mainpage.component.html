@@ -1,4 +1,4 @@
-<div class="container-fluid p-5  text-light" id="img-bg">
+<div class="container-fluid p-5  text-light bg-gr">
 
     <div class="card p-3" style="border-radius: 20px;">
 
@@ -8,7 +8,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-9 text-center">
 
-                        <h1 class="fs-52">hello,</h1>
+                        <h1 class="fs-52">welcome</h1>
                         <h2 class="p-0 gr-txt mb-3">{{nome}}</h2>
 
                         <h5 class="text-center text-md fs-18 pt-5">
@@ -17,7 +17,8 @@
 
                         <div class="row justify-content-center mt-3 mb-3">
                             <div class="col-md-8">
-                                <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#novaPostagem">New Post</button>
+                                <button class="btn btn-light me-2" data-bs-toggle="modal"
+                                    data-bs-target="#novaPostagem">New Post</button>
                                 <a class="btn btn-outline-light" href="#todasPostagens">Recent Posts</a>
                             </div>
                         </div>
@@ -40,63 +41,70 @@
 
 </div>
 
-<div class="container bg-dark">
-    <nav style="width: 100%;">
-        <div class="nav nav-tabs d-flex justify-content-center" style="width: 100%;" id="nav-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens" role="tab"
-                aria-controls="nav-todasPostagens" aria-selected="true">Recent Posts</a>
-
-            <a class="nav-item nav-link" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens" role="tab"
-                aria-controls="nav-minhasPostagens" aria-selected="false">My posts</a>
-
-            <a class="nav-item nav-link" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
-                aria-controls="nav-postagemTema" aria-selected="false">Posts By Subject</a>
-
+<div class="bg-dark">
+    <div class="container bg-dark pt-1">
+        <nav style="width: 100%;">
+            <div class="nav nav-tabs d-flex justify-content-center" style="width: 100%;" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-todasPostagens-tab" data-toggle="tab" href="#todasPostagens"
+                    role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Recent Posts</a>
+    
+                <a class="nav-item nav-link" id="nav-minhasPostagens-tab" data-toggle="tab" href="#minhasPostagens"
+                    role="tab" aria-controls="nav-minhasPostagens" aria-selected="false">My posts</a>
+    
+                <a class="nav-item nav-link" id="nav-postagemTema-tab" data-toggle="tab" href="#postagemTema" role="tab"
+                    aria-controls="nav-postagemTema" aria-selected="false">Posts By Subject</a>
+    
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel"
+                aria-labelledby="nav-todasPostagens-tab">Recent Postagens</div>
+    
+            <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">My
+                posts</div>
+    
+            <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">Posts By
+                Subject</div>
         </div>
-    </nav>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">Recent Postagens</div>
-        
-        <div class="tab-pane fade" id="minhasPostagens" role="tabpanel" aria-labelledby="nav-minhasPostagens-tab">My posts</div>
-
-        <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">Posts By Subject</div>
     </div>
 </div>
 
 
-  
-  <!-- Modal -->
-  <div class="modal fade text-light" id="novaPostagem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+<!-- Modal -->
+<div class="modal fade text-light" id="novaPostagem" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header bg-dark">
-          <h5 class="modal-title bg-dark" id="staticBackdropLabel">New Post</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-dark">
-          
-            <div class="form-group">
-                <label for="titulo">Title</label>
-                <input type="text" class="form-control" id="titulo" placeholder="Title">
+        <div class="modal-content">
+            <div class="modal-header bg-darker">
+                <h5 class="modal-title" id="staticBackdropLabel">New Post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body bg-darker">
 
-            <div class="form-group pt-2">
-                <label for="texto">Main Text:</label>
-                <textarea class="form-control" name="" id="texto" rows="3"></textarea>
+                <div class="form-group">
+                    <label for="titulo">Title</label>
+                    <input type="text" class="form-control" id="titulo" placeholder="Title">
+                </div>
+
+                <div class="form-group pt-2">
+                    <label for="texto">Main Text:</label>
+                    <textarea class="form-control" name="" id="texto" rows="3"></textarea>
+                </div>
+
+                <div class="form-group pt-2">
+                    <label for="tema">Choose a Tag, or <a data-bs-target="#novaPostagem" data-bs-dismiss="modal" routerLink='/tema' >Create a new one</a>:
+                    </label>
+                    <select class="form-control" name="tema" id="tema">
+                        <option value="">Temas</option>
+                    </select>
+                </div>
+
             </div>
-
-            <div class="form-group pt-2">
-                <label for="tema">Choose a Tag, or <a data-bs-dismiss="modal" routerLink='/tema'>Create a new one</a>: </label>
-                <select class="form-control" name="tema" id="tema">
-                    <option value="">Temas</option>
-                </select>
+            <div class="modal-footer bg-darker">
+                <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light">Publish</button>
             </div>
-
         </div>
-        <div class="modal-footer bg-dark">
-          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-light">Publish</button>
-        </div>
-      </div>
     </div>
-  </div>
+</div>

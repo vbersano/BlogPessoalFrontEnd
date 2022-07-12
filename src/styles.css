@@ -4,6 +4,18 @@ html {
     scroll-behavior: smooth;
 }
 
+hr {
+    border: 1px solid whitesmoke;
+}
+
+.card {
+    backdrop-filter: blur(4px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
 .fs-54 {
     font-size: 54pt;
 }
@@ -11,3 +23,52 @@ html {
 .fs-18 {
     font-size: 18pt;
 }
+
+.bg-darker {
+    background-color: #141619;
+}
+
+.bg-gr {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #9bef8c);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    width: 100%;
+    height: auto;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gr-txt {
+    text-align: center;
+    font-weight: 800 ;
+    
+    background: linear-gradient(to right,#b935d2 20%, #9f3bdb 40%, #7e42e5 60%, #514aed 80%);
+    background-size: 200% auto;
+    
+    color: #000;
+    background-clip: text;
+    text-decoration-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    animation: shine 4s linear infinite;
+  }
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
