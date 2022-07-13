@@ -1,4 +1,4 @@
-.card {
+.cardts {
     padding-bottom: 5;
     backdrop-filter: blur(4px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -7,7 +7,11 @@
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-.nav{
+.card-body {
+    border-radius: 5px;
+}
+
+.nav {
     background-color: dark;
     font-weight: 500;
 }

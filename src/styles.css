@@ -8,7 +8,13 @@ hr {
     border: 1px solid whitesmoke;
 }
 
-.card {
+.text-main-dark {
+    font-weight: 400 ;
+    color: #141619;
+
+}
+
+.cardts {
     backdrop-filter: blur(4px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(17, 25, 40, 0.75);
@@ -37,6 +43,15 @@ hr {
 
 }
 
+.bg-gr2 {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #a03ce7, #23a6d5);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+    width: 100%;
+    height: auto;
+
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -49,6 +64,11 @@ hr {
     100% {
         background-position: 0% 50%;
     }
+}
+
+.fw-800 {
+    text-align: center;
+    font-weight: 800 ;
 }
 
 .gr-txt {
