@@ -1,0 +1,26 @@
+<div class="container-fluid p-5 d-flex text-light bg-gr justify-content-center">
+
+    <div class="card p-3" style="border-radius: 20px; width: 90vh;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="fs-54 text-center mb-2">Delete Tag</h1>
+            </div>
+        </div>
+    
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+                <h5 class="fs-18 text-center">Are you sure you want to proceed?</h5>
+                <h5 class="fs-18 text-center">Every post associated with this Tag will also be terminated.</h5>
+
+                <h5 class="fs-18 text-center gr-txt mt-1 mb-1">{{tema.descricao}}</h5>
+    
+                <div class="d-flex justify-content-center mt-3 mb-3">
+                    <button class="btn btn-light me-3" (click)='apagar()'>Delete</button>
+                    <button class="btn btn-outline-danger" routerLink='/tema'>Cancel</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+</div>

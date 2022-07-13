@@ -1,0 +1,26 @@
+<div class="container-fluid p-5 d-flex text-light bg-gr justify-content-center">
+
+    <div class="card p-3" style="border-radius: 20px; width: 80vh;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="fs-54 text-center">Edit Tag</h1>
+            </div>
+        </div>
+    
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="descricao" class="fs-18 text-center"><h5>Tag Description</h5></label>
+                    <input type="text" class="form-control" id="descricao" [(ngModel)]='tema.descricao'>
+                </div>
+    
+                <div class="d-flex justify-content-center mt-3 mb-3">
+                    <button class="btn btn-light me-3" (click)="atualizar()">Update</button>
+                    <button class="btn btn-outline-danger" [routerLink]="['/tema', tema.id]">Cancel</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+</div>
