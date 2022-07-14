@@ -1,0 +1,69 @@
+<div class="container-fluid p-5 d-flex text-light bg-gr justify-content-center">
+
+    <div class="cardts p-3" style="border-radius: 20px; width: 80vh;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="fs-54 text-center">Edit User</h1>
+            </div>
+        </div>
+    
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-8">
+                <div class="form-group">
+                
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-md-12">
+        
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input [(ngModel)]='user.nome' class="form-control" type="text" name="username" id="username" placeholder="Username">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="user">E-mail</label>
+                                <input [(ngModel)]='user.usuario' class="form-control" type="text" name="user" id="user" placeholder="E-mail adress">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="photo">Profile Picture</label>
+                                <input [(ngModel)]='user.foto' class="form-control" type="text" name="photo" id="photo"
+                                    placeholder="Profile picture URL link">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input (input)='confirmSenha($event)' class="form-control" type="password" name="password" id="password"
+                                    placeholder="Password">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmPassword" id="confirmPassword"
+                                    placeholder="Confirm your Password">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <select class="form-control" name="type" id="type" (change)='tipoUser($event)'>
+                                    <option>Select a User Type</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Admin">Admin</option>
+                                </select>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                
+                </div>
+    
+                <div class="d-flex justify-content-center mt-3 mb-3">
+                    <button class="btn btn-light me-3" (click)="atualizar()">Update</button>
+                    <button class="btn btn-outline-danger" routerLink="/mainpage">Cancel</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+</div>

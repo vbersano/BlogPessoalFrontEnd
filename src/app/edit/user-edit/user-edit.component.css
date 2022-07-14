@@ -1,0 +1,16 @@
+.cardts {
+    backdrop-filter: blur(4px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+hr{
+    border: 1px solid whitesmoke;
+}
+
+div.form-group{
+    margin-top: 12px;
+    font-weight: 600;
+}
