@@ -48,7 +48,7 @@
             <div class="nav nav-tabs d-flex justify-content-center" style="width: 100%;" id="nav-todasPostagens-tab"
                 role="tablist">
 
-                <button class="nav-link active" id="nav-todasPostagens-tab" data-bs-toggle="tab"
+                <button (click)="getAllPostagens()" class="nav-link active" id="nav-todasPostagens-tab" data-bs-toggle="tab"
                     data-bs-target="#todasPostagens" type="button" role="tab" aria-controls="nav-todasPostagens"
                     aria-selected="true">Recent Posts</button>
 
@@ -111,9 +111,13 @@
                             <p class="card-text text-main-dark ">{{item.texto}}</p>
                         </div>
 
-                        <div class="card-footer text-muted ">
-                            <p class="card-text"><small class="text-white">{{item.data | date: 'dd/MM/yyyy'}}
-                                    {{item.data | date: 'HH:mm'}} </small></p>
+                        <div class="card-footer text-muted">
+                            <p class="card-text"><small class="text-white">{{item.data | date: 'dd/MM/yyyy'}} {{item.data | date: 'HH:mm'}} </small></p>
+
+                                    <div class="d-flex justify-content-center pb-2">
+                                        <button [routerLink]="['/postagem-edit', item.id]" class="btn btn-light me-3 ">Edit</button>
+                                        <button [routerLink]="['/postagem-delete', item.id]" class="btn btn-outline-light">Delete</button>
+                                    </div>
                         </div>
 
                     </div>
@@ -123,9 +127,9 @@
             <!--postagens do usuario-->
 
             <!--postagem por tema-->
-            <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab" *ngFor="let tema of listaTemas">
+            <div class="tab-pane fade" id="postagemTema" role="tabpanel" aria-labelledby="nav-postagemTema-tab">
 
-                <div class="row row-cols-1 row-cols-md-5 h-100 g-1 d-flex justify-content-center">
+                <div class="row row-cols-1 row-cols-md-5 h-100 g-1 d-flex justify-content-center" *ngFor="let tema of listaTemas">
 
                     <div class="card text-white bg-gr2 border-rounded m-2" *ngFor='let item of tema.postagem'>
 
@@ -139,8 +143,7 @@
                         </div>
 
                         <div class="card-footer text-muted ">
-                            <p class="card-text"><small class="text-white">{{item.data | date: 'dd/MM/yyyy'}}
-                                    {{item.data | date: 'HH:mm'}} </small></p>
+                            <p class="card-text"><small class="text-white">{{item.data | date: 'dd/MM/yyyy'}} {{item.data | date: 'HH:mm'}} </small></p>
                         </div>
 
                     </div>

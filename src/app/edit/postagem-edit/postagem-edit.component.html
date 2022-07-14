@@ -1,0 +1,48 @@
+<div class="bg-darker p-0">
+    <a routerLink='/mainpage' class="text-light ps-3">
+        <i class="fa fa-angle-double-left" aria-hidden="true"> HOME</i>
+    </a>
+</div>
+
+<div class="container-fluid p-5 d-flex text-light bg-gr justify-content-center">
+
+    <div class="cardts p-3" style="border-radius: 20px; width: 90vh;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="fs-54 text-center">Edit Post</h1>
+            </div>
+        </div>
+    
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+                
+                <div class="form-group">
+                    <label for="titulo">Title</label>
+                    <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo" placeholder="Digite o título">
+                  </div>
+            
+                  <div class="form-group mt-2">
+                    <label for="texto">Text</label>
+                    <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+                  </div>
+            
+                  <div class="form-group mt-2">
+                    <label for="texto">Choose a Tag, or <a data-dismiss="modal" routerLink='/tema'>Create a new one</a>: </label>
+                    <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                      <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                        {{item.descricao}}
+                      </option>
+                    </select>
+                  </div>
+            
+    
+                <div class="d-flex justify-content-center mt-3 mb-3">
+                    <button class="btn btn-light me-3" (click)="atualizar()">Update</button>
+                    <button class="btn btn-outline-danger" routerLink='/mainpage'>Cancel</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+</div>
