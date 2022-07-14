@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { User } from '../model/User';
+import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private alertas: AlertasService
     ) { }
 
   ngOnInit(): void {
@@ -36,12 +38,12 @@ export class RegisterComponent implements OnInit {
     this.user.tipoUsuario = this.tipoUsuario
 
     if(this.user.senha != this.confirmarSenha) {
-      alert('Passwords are differing')
+      this.alertas.showAlertInfo('Passwords are differing')
     } else {
       this.authService.register(this.user).subscribe((resp: User) => {
         this.user = resp
         this.router.navigate(['/login'])
-        alert('User registration complete!')
+        this.alertas.showAlertSuccess('User registration complete!')
       })
     }
 
