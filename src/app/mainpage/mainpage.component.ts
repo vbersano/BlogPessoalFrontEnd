@@ -19,6 +19,8 @@ export class MainpageComponent implements OnInit {
   nome = environment.nome
   postagem  = new Postagem
   listaPostagem: Postagem[]
+  tituloPost: string
+
   tema = new Tema
   listaTemas: Tema[]
   idTema: number
@@ -67,9 +69,36 @@ export class MainpageComponent implements OnInit {
     })
   }
 
+  findByTituloPostagem() {
+
+    if(this.tituloPost == '') {
+      this.getAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[])=> {
+        this.listaPostagem = resp
+      })
+    }
+
+  }
+
   findByIdUser(){
     this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
       this.user = resp
+    })
+  }
+  
+  findByIdPostagem(id: number) {
+    this.postagemService.getByIdPostagem(id).subscribe((resp: Postagem) => {
+      this.postagem = resp;
+      this.darLike();
+    })
+  }
+
+  darLike() {
+    this.postagem.gostei += 1;
+    this.postagemService.putPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp;
+      this.getAllPostagens();
     })
   }
 
